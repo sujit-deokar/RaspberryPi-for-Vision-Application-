@@ -17,7 +17,7 @@ Once you have the ZIP file downloaded to your computer, unarchive it. There will
 Installation of Raspbian image file on memory card:(check this is in Ubuntu..):
 
  Press Alt+Ctrl+T (shortcut for terminal)
- Go back to the Terminal and type the following command, ensuring you replace the “[FILESYSTEM]” value with the one you noted earlier and the “[DISK IMAGE NAME]” with the proper file name obtained above.
+ Go to the Terminal and type the following command, ensuring you replace the “[FILESYSTEM]” value with the one you noted earlier and the “[DISK IMAGE NAME]” with the proper file name obtained above.
 
 sudo dd bs=1m if=[DISK IMAGE NAME] of=[FILESYSTEM]
 
