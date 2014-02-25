@@ -14,7 +14,8 @@ Installation of OS on RPI:
  But now I had to find a way to tie my GPIO to my vision application. So the first step was to just install Raspbian. And it was so easy. As I'm using a Debian based OS, I also wanted a minimal installation. This leaves me with the Raspbian Installer(http://www.raspberrypi.org/downloads), which is essentially a Debian NetInstall built around Raspbian. Raspbian is available for free from the Raspberry Pi website. Under the header “Raspbian ‘wheezy’”, download either the torrent or direct download. The torrent has the potential to be faster, but some firewalls may block the required ports and you may have to use the direct download instead.
 Once you have the ZIP file downloaded to your computer, unarchive it. There will be a single .img file inside. This is the disk image you will flash to the Raspberry Pi’s SD card. To install Raspbian, you will need an SD card that has 2 GB of space or more— this cheap 16 GB Class 10 SD card works great on the Raspberry Pi, and gives you plenty of room to add media and other programs once Raspbian is installed.
 
-Installation of Raspbian image file on memory card:(check this is in Ubuntu..)
+Installation of Raspbian image file on memory card:(check this is in Ubuntu..):
+
  Press Alt+Ctrl+T (shortcut for terminal)
  Go back to the Terminal and type the following command, ensuring you replace the “[FILESYSTEM]” value with the one you noted earlier and the “[DISK IMAGE NAME]” with the proper file name obtained above.
 
