@@ -14,7 +14,7 @@ Installation of OS on RPI:
  But now I had to find a way to tie my GPIO to my vision application. So the first step was to just install Raspbian. And it was so easy. As I'm using a Debian based OS, I also wanted a minimal installation. This leaves me with the Raspbian Installer(http://www.raspberrypi.org/downloads), which is essentially a Debian NetInstall built around Raspbian. Raspbian is available for free from the Raspberry Pi website. Under the header “Raspbian ‘wheezy’”, download either the torrent or direct download. The torrent has the potential to be faster, but some firewalls may block the required ports and you may have to use the direct download instead.
 Once you have the ZIP file downloaded to your computer, unarchive it. There will be a single .img file inside. This is the disk image you will flash to the Raspberry Pi’s SD card. To install Raspbian, you will need an SD card that has 2 GB of space or more— this cheap 16 GB Class 10 SD card works great on the Raspberry Pi, and gives you plenty of room to add media and other programs once Raspbian is installed.
 
-Installation of Raspbian image file on memory card:(check this is in Ubuntu..):
+Installation of Raspbian image file on memory card using Ubuntu:
 
  Press Alt+Ctrl+T (shortcut for terminal)
  Go to the Terminal and type the following command, ensuring you replace the “[FILESYSTEM]” value with the one you noted earlier and the “[DISK IMAGE NAME]” with the proper file name obtained above.
@@ -23,10 +23,15 @@ sudo dd bs=1m if=[DISK IMAGE NAME] of=[FILESYSTEM]
 
 For me, the command would look something like this:
 
-sudo dd bs=1m if=2012-12-16-wheezy-raspbian.img of=/dev/rdisk4
+sudo dd bs=1m if=2012-12-16-wheezy-raspbian.img of=/dev/sdb
 
 Hit enter, and wait until the command completes. Once dd flashes the disk image, you can remove it from your Mac and plug it into your Raspberry Pi. The default username is "pi" and the default password is "raspberry".
 
- 
+Installation of Raspbian image file on memory card using Windows:
+
+    The recommended method for flashing an SD for use in a Raspberry Pi is a program called Win32DiskImager. The latest version can be found on the official website (http://sourceforge.net/projects/win32diskimager/files/).
+Once you’ve downloaded the Win32DiskImager application and extracted the ZIP file, download the Raspbian distribution. This can be found on the Raspberry Pi website(http://www.raspberrypi.org/downloads) under the heading “Raspbian ‘wheezy’”. Once the ZIP file downloads, extract the .img from the .zip.
+     In Win32DiskImager, ensure you select the correct drive letter for your SD card. Also, select the .img file you extracted from the Raspbian distribution above using the file picker. Once you have made sure you have the correct .img file and drive letter for your SD card, click “Write” (not read) to flash the SD card. This will take less than five minutes on average and you can see the current progress in the Win32DiskImager window. Once the flash completes, you can exit the program. 
+
  Perfect, just a barebones installation as soon as it finishes running.Then I got RPi outoff the enclosure, plugged it with HDMI to VGA converter, which was able to connect monitor of my PC. Than I plugged  my USB keyboard and sat down for a quick install. Except, the RPI doesn't seem to want to respond to my keyboard. A quick overview of what I was doing revealed that my keyboard was actually an un-powered USB device. The RPi isn't powerful enough to run it as minimum 500mA current was required for its own processing. Great. Luckily I had my mobile charger with higher rating, I can use to send enough power to the keyboard. Which did work than.
 
