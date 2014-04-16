@@ -34,3 +34,48 @@ The recommended method for flashing an SD for use in a Raspberry Pi is a program
 
  Perfect, just a barebones installation as soon as it finishes running.Then I got RPi outoff the enclosure, plugged it with HDMI to VGA converter, which was able to connect monitor of my PC. Than I plugged  my USB keyboard and sat down for a quick install. Except, the RPI doesn't seem to want to respond to my keyboard. A quick overview of what I was doing revealed that my keyboard was actually an un-powered USB device. The RPi isn't powerful enough to run it as minimum 500mA current was required for its own processing. Great. Luckily I had my mobile charger with higher rating, I can use to send enough power to the keyboard. Which did work than.
 
+Setting internet on RPi:
+==========================
+Internet on RPi can be set using dynamic (DHCP) or static (IP) settings:
+To configure the board to use DHCP or static IP settings:
+
+    You can use a LXTerminal to access DHCP settings.
+
+    Display the contents of the /etc/network/interfaces file. Enter:
+
+    cat /etc/network/interfaces 
+
+1) If the board is configured to use DHCP services (the default configuration), dhcp appears at the end of the following line:
+If the board is configured to use static IP settings, static appears at the end of the following line:
+
+    iface eth0 inet static
+
+    To use DHCP services, change the line to:
+
+    iface eth0 inet dhcp
+   Press Ctrl+X.
+   Enter Y to save the modified buffer.
+   Now , disable the interface,
+   ifconfig eth0 down
+   Enable the interface,
+   ifconfig eth0 up 
+   Display details of all interface,
+   ifconfig -a
+
+2) To use static IP settings, change the line to:
+
+    iface eth0 inet static
+
+    For static IP settings, add lines for address, netmask, and gateway. For example:
+
+ iface eth0 inet static
+address 10.0.0.20
+netmask 255.255.255.0
+network 10.0.0.0 //I didn't enter this line
+broadcast 10.0.0.255 //I didn't enter this line
+gateway 10.0.0.10
+
+        Press Ctrl+X.
+        Enter Y to save the modified buffer.
+now go for:
+sudo reboot
