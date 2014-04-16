@@ -69,11 +69,11 @@ If the board is configured to use static IP settings, static appears at the end 
     For static IP settings, add lines for address, netmask, and gateway. For example:
 
  iface eth0 inet static
-address 10.0.0.20
-netmask 255.255.255.0
-network 10.0.0.0 //I didn't enter this line
-broadcast 10.0.0.255 //I didn't enter this line
-gateway 10.0.0.10
+ address 10.0.0.20
+ netmask 255.255.255.0
+ network 10.0.0.0 //I didn't enter this line
+ broadcast 10.0.0.255 //I didn't enter this line
+ gateway 10.0.0.10
 
         Press Ctrl+X.
         Enter Y to save the modified buffer.
