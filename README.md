@@ -54,12 +54,19 @@ If the board is configured to use static IP settings, static appears at the end 
 
     iface eth0 inet dhcp
    Press Ctrl+X.
+   
    Enter Y to save the modified buffer.
+   
    Now , disable the interface,
+   
    ifconfig eth0 down
+   
    Enable the interface,
+   
    ifconfig eth0 up 
+   
    Display details of all interface,
+   
    ifconfig -a
 
 2) To use static IP settings, change the line to:
